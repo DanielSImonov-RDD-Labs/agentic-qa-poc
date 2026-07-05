@@ -1,0 +1,33 @@
+# Prevent Cursor's AI from reading or indexing secrets and sensitive data.
+# This file is a security boundary, not a formatting preference — keep it
+# in sync with .gitignore's secret-related entries.
+
+# Environment files (all variants, keep only the example template)
+.env
+.env.*
+!.env.example
+
+# Secret / credential directories
+secrets/
+secret/
+credentials/
+.secrets/
+*.secret
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Cloud / infra credentials
+.aws/
+.gcp/
+.azure/
+*.kubeconfig
+
+# Local override configs that may embed tokens
+*.local.json
+*.local.yaml
+*.local.yml
+
+# Git internals (may contain sensitive history)
+.git/
